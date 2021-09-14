@@ -1,1 +1,1 @@
-# udemy-course
+# Учебный проект на NextJS
