@@ -20,7 +20,10 @@ a {
 :root {
 	--black: #3B434E;
 	--white: rgb(255, 255, 255);
+	--gray-ligth: #EBEBEB;
+	--gray: #E2E2E2;
 	--primary: #7653FC;
+	--primary-hover: #5c36f7;
 	--red: #FC836D;
 	--green: #1DC37E;
 	--green-ligth: #C8F8E4;
