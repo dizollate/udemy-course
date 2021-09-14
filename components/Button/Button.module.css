@@ -42,3 +42,7 @@
 .down {
   transform: rotate(90deg);
 }
+
+.primary svg {
+  fill: var(--white);
+}
