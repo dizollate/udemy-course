@@ -1,0 +1,31 @@
+.content {
+  grid-area: content;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  align-items: center;
+}
+.agreement_privacy {
+  display: flex;
+}
+.agreement {
+  margin-right: 40px;
+}
+
+@media (max-width: 920px) {
+  .content {
+    flex-direction: column;
+    align-items: center;
+  }
+  .agreement_privacy {
+    flex-direction: column;
+  }
+  .rights {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .agreement {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+}
