@@ -1,8 +1,15 @@
 .fill {
   fill: var(--primary);
+}
 
+.spanStar {
+  cursor: pointer;
 }
 
 .star {
   margin-right: 5px;
+}
+
+.editable {
+  cursor: pointer;
 }
