@@ -23,9 +23,12 @@ a {
 	--gray-ligth: #EBEBEB;
 	--gray: #E2E2E2;
 	--primary: #7653FC;
-	--primary-hover: #5c36f7;
+	--primary-hover: #5131d1;
 	--red: #FC836D;
 	--green: #1DC37E;
 	--green-ligth: #C8F8E4;
 	--font-family: 'Noto Sans KR', sans-serif;
+	--small-font: 14px;
+	--medium-font: 16px;
+	--large-font: 18px;
 }
