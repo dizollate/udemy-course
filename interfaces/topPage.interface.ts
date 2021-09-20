@@ -16,7 +16,7 @@ export interface HhData {
   count: number,
   juniorSalary: number;
   middleSalary: number;
-  seniorSalart: number;
+  seniorSalary: number;
   updatedAt: Date;
 }
 
@@ -27,6 +27,7 @@ export interface TopPageModel {
   alias: string;
   title: string;
   category: string;
+  hh: HhData;
   seoText: string;
   tagsTitle: string;
   metaTitle: string;
