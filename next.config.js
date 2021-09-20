@@ -2,7 +2,6 @@ module.exports = {
   webpack(config, options) {
     config.module.rules.push({
       test: /\.svg?$/,
-
       oneOf: [
         {
           use: [
