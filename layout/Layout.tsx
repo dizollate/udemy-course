@@ -4,26 +4,29 @@ import { Header } from "./Header/Header";
 import { ILayout } from "./Layout.props";
 import { Sidebar } from "./Sidebar/Sidebar";
 import styles from "./Layout.module.css";
+import { AppContextProvider, IAppContext } from "../context/app.context";
 
 const Layout = ({ children }: ILayout): JSX.Element => {
   return (
     <div className={styles.wrapper}>
       <Header className={styles.header} />
       <Sidebar className={styles.sidebar} />
-      <body className={styles.body}>{children}</body>
+      <div className={styles.body}>{children}</div>
       <Footer className={styles.footer} />
     </div>
   );
 };
 
-export const WithLayout = <T extends Record<string, unknown>>(
+export const WithLayout = <T extends Record<string, unknown> & IAppContext>(
   Component: FunctionComponent<T>
 ) => {
   return function withLayoutComponent(props: T): JSX.Element {
     return (
-      <Layout>
-        <Component {...props} />
-      </Layout>
+      <AppContextProvider menu={props.menu} firstCategory={props.firstCategory}>
+        <Layout>
+          <Component {...props} />
+        </Layout>
+      </AppContextProvider>
     );
   };
 };
