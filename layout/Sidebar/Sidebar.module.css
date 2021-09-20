@@ -1,0 +1,9 @@
+.logo {
+  margin-top: 34px;
+}
+.sidebar {
+  grid-area: sidebar;
+  display: grid;
+  align-content: start;
+  gap: 20px;
+}
