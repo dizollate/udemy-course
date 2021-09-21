@@ -1,16 +1,21 @@
 import styles from "./Product.module.css";
 import { IProduct } from "./Product.props";
 import cn from "classnames";
-import { Button, Card, Divider, Rating, Tag } from "..";
+import { Button, Card, Divider, Rating, Review, ReviewForm, Tag } from "..";
 import { declOfNum, priceRu } from "../../helpers/helpers";
 import Image from "next/image";
+import { useState } from "react";
 
 export const Product = ({
   className,
   product,
   ...props
 }: IProduct): JSX.Element => {
+
+  const [isReviewOpened, setIsReviewOpened] = useState<boolean>(false);
+
   return (
+    <>
     <Card color="white" className={styles.product}>
       <div className={styles.logo}>
         <Image
@@ -82,12 +87,26 @@ export const Product = ({
         <Button appearance="primary">Узнать подробнее</Button>
         <Button
           appearance="ghost"
-          arrow="right"
+          arrow={isReviewOpened ? 'down' : 'right'}
           className={styles.reviewButton}
+          onClick={() => setIsReviewOpened(!isReviewOpened)}
         >
           Читать отзывы
         </Button>
       </div>
     </Card>
+    <Card color='blue' className={cn(styles.reviews, {
+      [styles.opened]: isReviewOpened,
+      [styles.closed]: !isReviewOpened,
+    })}>
+      {product.reviews.map(r => (
+        <>
+        <Review key={r._id} review={r}/>
+        <Divider />
+        </>
+      ))}
+      <ReviewForm productId={product._id}/>
+    </Card>
+    </>
   );
 };
