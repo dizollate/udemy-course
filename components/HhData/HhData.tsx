@@ -6,7 +6,6 @@ import RateIcon from "./rate.svg";
 import { priceRu } from "../../helpers/helpers";
 
 export const HhData = ({
-  children,
   count,
   juniorSalary,
   middleSalary,

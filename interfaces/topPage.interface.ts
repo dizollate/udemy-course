@@ -27,9 +27,10 @@ export interface TopPageModel {
   alias: string;
   title: string;
   category: string;
-  hh: HhData;
-  seoText: string;
+  hh?: HhData;
+  seoText?: string;
   tagsTitle: string;
+  advantages?: TopPageAdvantage[];
   metaTitle: string;
   metaDescription: string;
   firstCategory: TopLevelCategory;
