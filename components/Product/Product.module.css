@@ -212,16 +212,9 @@
   color: var(--primary);
 }
 
-.opened {
+.reviews {
   overflow: hidden;
-  max-height: auto;
   padding: 30px;
-}
-
-.closed {
-  overflow: hidden;
-  max-height: 0;
-  padding: 0;
 }
 
 @media screen and (min-width: 767px) and (max-width: 855px) {
