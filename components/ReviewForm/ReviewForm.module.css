@@ -25,12 +25,24 @@
   align-items: left;
 }
 
-.success {
-  background: var(--green-ligth);
+.panel {
   padding: 20px;
   position: relative;
   margin-top: 20px;
   border-radius: 5px;
+}
+
+.success {
+  background: var(--green-ligth);
+  
+}
+
+.error {
+  background: var(--red-ligth);
+}
+
+.error .close path {
+  stroke: var(--red);
 }
 
 .successTitle {

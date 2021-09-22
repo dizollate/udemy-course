@@ -187,6 +187,7 @@
   .rateTitle {
     grid-area: rateTitle;
   }
+
   .hr {
     grid-area: hr;
   }
@@ -207,8 +208,8 @@
     grid-area: actions;
   }
 }
-.reviews {
-
+.rateTitle a {
+  color: var(--primary);
 }
 
 .opened {
@@ -223,8 +224,7 @@
   padding: 0;
 }
 
-@media screen and (min-width:767px ) and ( max-width: 855px) {
-
+@media screen and (min-width: 767px) and (max-width: 855px) {
   .product {
     grid-template-columns: 70px 30px 1fr;
     grid-template-areas:
@@ -240,7 +240,9 @@
       "hr2 hr2 hr2"
       "actions actions actions";
   }
-  .price, .credit, .rating {
+  .price,
+  .credit,
+  .rating {
     margin-bottom: 10px;
   }
   .tags {
@@ -249,7 +251,6 @@
 }
 
 @media screen and (max-width: 640px) {
-
   .product {
     grid-template-columns: 70px 30px 1fr;
     grid-template-areas:
@@ -265,7 +266,9 @@
       "hr2 hr2 hr2"
       "actions actions actions";
   }
-  .price, .credit, .rating {
+  .price,
+  .credit,
+  .rating {
     margin-bottom: 10px;
   }
   .tags {
