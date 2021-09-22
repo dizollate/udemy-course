@@ -1,15 +1,16 @@
 import styles from "./Rating.module.css";
 import { IRating } from "./Rating.props";
 import cn from "classnames";
-import { useEffect, useState } from "react";
+import { ForwardedRef, forwardRef, useEffect, useState } from "react";
 import StarIcon from "./star.svg";
 
-export const Rating = ({
+export const Rating = forwardRef(({
   isEditable = false,
   rating,
   setRating,
+  error,
   ...props
-}: IRating): JSX.Element => {
+}: IRating, ref:ForwardedRef<HTMLDivElement>): JSX.Element => {
   const [ratingArray, setRattingArray] = useState<JSX.Element[]>(
     Array(5).fill(<></>)
   );
@@ -25,6 +26,7 @@ export const Rating = ({
           className={cn(styles.star, {
             [styles.fill]: i < currentRating,
             [styles.editable]: isEditable,
+            [styles.error]: error
           })}
         />
       );
@@ -47,13 +49,14 @@ export const Rating = ({
   };
 
   return (
-    <div {...props}>
+    <div {...props} ref={ref} className={styles.starWrapper}>
       {ratingArray.map((r, i) => {
-        console.log(i);
         return (
           <span
             key={i}
-            className={styles.spanStar}
+            className={cn(styles.spanStar, {
+              [styles.error]: error
+            })}
             onMouseEnter={() => changeDisplay(i + 1)}
             onMouseLeave={() => changeDisplay(rating)}
             onClick={() => onClick(i + 1)}
@@ -63,6 +66,7 @@ export const Rating = ({
           </span>
         );
       })}
+      {error && <span className={styles.starError}>{error.message}</span> }
     </div>
   );
-};
+});

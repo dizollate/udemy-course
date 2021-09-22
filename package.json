@@ -27,6 +27,7 @@
     "eslint-config-next": "11.1.2",
     "eslint-plugin-react-hooks": "^4.2.0",
     "next": "^11.0.1-canary.4",
+    "react-hook-form": "^7.15.4",
     "stylelint": "^13.13.1",
     "stylelint-config-standard": "^22.0.0",
     "stylelint-order": "^4.1.0",

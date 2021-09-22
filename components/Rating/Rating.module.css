@@ -13,3 +13,18 @@
 .editable {
   cursor: pointer;
 }
+
+.error {
+  stroke: var(--red)
+}
+.starWrapper {
+  position: relative;
+}
+.starError {
+  position: absolute;
+  color: var(--red);
+  top: -22px;
+  left: 0;
+  
+}
+

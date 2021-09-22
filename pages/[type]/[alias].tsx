@@ -17,7 +17,6 @@ function TopPage({
   products,
   firstCategory,
 }: TopPageProps): JSX.Element {
-  console.log(page);
   return (
     <TopPageComponent
       firstCategory={firstCategory}
@@ -42,7 +41,6 @@ export const getStaticPaths: GetStaticPaths = async () => {
       menu.flatMap((s) => s.pages.map((p) => `/${m.route}/${p.alias}`))
     );
   }
-  console.log(paths);
   return {
     paths,
     fallback: true,
