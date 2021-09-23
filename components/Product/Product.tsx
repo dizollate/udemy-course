@@ -3,7 +3,6 @@ import { IProduct } from "./Product.props";
 import cn from "classnames";
 import { Button, Card, Divider, Rating, Review, ReviewForm, Tag } from "..";
 import { declOfNum, priceRu } from "../../helpers/helpers";
-import Image from "next/image";
 import { ForwardedRef, forwardRef, useRef, useState } from "react";
 import { motion } from "framer-motion";
 
@@ -40,12 +39,11 @@ export const Product = motion(
         <div className={className} {...props} ref={ref}>
           <Card color="white" className={styles.product}>
             <div className={styles.logo}>
-              <Image
+              <img
                 src={process.env.NEXT_PUBLIC_DOMAIN + product.image}
                 alt={product.title}
                 width={70}
                 height={70}
-                layout="intrinsic"
               />
             </div>
             <div className={styles.title}>{product.title}</div>
