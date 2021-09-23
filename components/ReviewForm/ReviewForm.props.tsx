@@ -1,5 +1,4 @@
-import { DetailedHTMLProps, HTMLAttributes, ReactNode } from "react";
-import { ProductModel } from "../../interfaces/product.interface";
+import { DetailedHTMLProps, HTMLAttributes } from "react";
 
 export interface IReviewForm
   extends DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement> {

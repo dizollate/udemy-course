@@ -4,7 +4,6 @@ import cn from "classnames";
 import React from 'react';
 
 export const ButtonIcon = ({
-  children,
   className,
   appearance,
   icon,

@@ -13,7 +13,6 @@ import { TopPageComponent } from "../../page-components";
 import { API } from "../../helpers/api";
 
 function TopPage({
-  menu,
   page,
   products,
   firstCategory,

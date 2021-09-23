@@ -40,8 +40,12 @@ export const ReviewForm = ({
       } else {
         setIsError("Что-то произошло не так!");
       }
-    } catch (e: any) {
-      setIsError(e.message);
+    } catch (e: unknown){
+      if (typeof e === 'string') {
+        e.toUpperCase();
+      } else if (e instanceof Error) {
+        setIsError(e.message);
+      }
     }
   };
 

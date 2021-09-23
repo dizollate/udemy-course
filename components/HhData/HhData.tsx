@@ -1,6 +1,5 @@
 import styles from "./HhData.module.css";
 import { IHhData } from "./HhData.props";
-import cn from "classnames";
 import { Card } from "..";
 import RateIcon from "./rate.svg";
 import { priceRu } from "../../helpers/helpers";
@@ -13,7 +12,7 @@ export const HhData = ({
   ...props
 }: IHhData): JSX.Element => {
   return (
-    <div className={styles.hh}>
+    <div className={styles.hh} {...props}>
       <Card color="white" className={styles.count}>
         <div className={styles.title}>Всего вакансий</div>
         <div className={styles.countValue}>{count}</div>
