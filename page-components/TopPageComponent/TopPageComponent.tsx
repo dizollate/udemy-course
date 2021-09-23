@@ -1,8 +1,7 @@
 import { useEffect, useReducer } from "react";
-import { Card, HhData, Htag, Product, Sort, Tag } from "../../components";
+import { HhData, Htag, Product, Sort, Tag } from "../../components";
 import { Advantages } from "../../components/Advantages/Advantages";
 import { SortEnum } from "../../components/Sort/Sort.props";
-import { useScrollY } from "../../hooks/useScrollY";
 import { TopLevelCategory } from "../../interfaces/topPage.interface";
 import { sortReducer } from "./sort.reducer";
 import styles from "./TopPageComponent.module.css";
@@ -13,8 +12,6 @@ export const TopPageComponent = ({
   products,
   firstCategory,
 }: TopPageComponentProps): JSX.Element => {
-
-  const y = useScrollY();
 
   const [{ products: sortedProducts, sort }, dispatchSort] = useReducer(
     sortReducer,

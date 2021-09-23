@@ -16,7 +16,7 @@ export const Menu = (): JSX.Element => {
       key.preventDefault();
       openSecondLevel(secondCategory);
     }
-  }
+  };
 
   const router = useRouter();
 

@@ -21,7 +21,7 @@ const Layout = ({ children }: ILayout): JSX.Element => {
     }
     setIsSkipLinkDisplayed(false);
 
-  }
+  };
 
   return (
     <div className={styles.wrapper}>

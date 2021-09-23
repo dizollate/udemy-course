@@ -1,6 +1,5 @@
 import { IFooter } from "./Footer.props";
 import styles from "./Footer.module.css";
-//import styles from './Footer.module.css';
 
 export const Footer = ({ ...props }: IFooter): JSX.Element => {
   return (
