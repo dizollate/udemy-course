@@ -53,9 +53,9 @@ export const Menu = (): JSX.Element => {
     return (
       <>
         {firstLevelMenu.map((m) => (
-          <div key={m.route}>
-            <Link href={`/${m.route}`}>
-              <a>
+          <div key={m.route} >
+            <Link href={`/${m.route}`} >
+              <a style={{pointerEvents: 'none'}}>
                 <div
                   className={cn(styles.firstLevel, {
                     [styles.firstLeveleActive]: m.id == firstCategory,

@@ -8,16 +8,19 @@
   line-height: 25px;
   transition: all 0.3s ease;
   margin-top: 15px;
+  pointer-events: none,
 }
 
 .firstLeveleActive span,
 .firstLevel:hover {
   color: var(--primary);
+  pointer-events: none,
 }
 
 .firstLeveleActive svg,
 .firstLevel:hover svg {
   fill: var(--primary);
+  pointer-events: none,
 }
 
 .secondLevel {
