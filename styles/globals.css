@@ -22,15 +22,15 @@ a {
 	--white: rgb(255, 255, 255);
 	--gray-ligth: #EBEBEB;
 	--gray: #E2E2E2;
-	--primary: #7653FC;
+	--primary: #7351f5;
 	--primary-hover: #5131d1;
 	--red: #FC836D;
 	--red-ligth: #fdc6bd;
-	--green: #1DC37E;
+	--green: #127a4f;
 	--green-ligth: #C8F8E4;
 	--font-family: 'Noto Sans KR', sans-serif;
 	--small-font: 14px;
 	--medium-font: 16px;
 	--large-font: 18px;
-	--gray-dark: #787D85;
+	--gray-dark: #6c7077;
 }
