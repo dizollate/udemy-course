@@ -1,12 +1,13 @@
 .sidebar {
-  grid-area: sidebar;
-  display: grid;
-  align-content: start;
-  gap: 20px;
+	grid-area: sidebar;
+
+	display: grid;
+	align-content: start;
+	gap: 20px;
 }
 
 @media (max-width: 765px) {
-  .sidebar {
-    display: none;
-  }
+	.sidebar {
+		display: none;
+	}
 }

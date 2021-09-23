@@ -2,8 +2,10 @@ html,
 body {
 	margin: 0;
 	padding: 0;
+
 	color: var(--black);
 	background: #F5F6F8;
+
 	font-family: 'Noto Sans KR', sans-serif;
 }
 
@@ -22,15 +24,15 @@ a {
 	--white: rgb(255, 255, 255);
 	--gray-ligth: #EBEBEB;
 	--gray: #E2E2E2;
-	--primary: #7351f5;
-	--primary-hover: #5131d1;
+	--primary: #7351F5;
+	--primary-hover: #5131D1;
 	--red: #FC836D;
-	--red-ligth: #fdc6bd;
-	--green: #127a4f;
+	--red-ligth: #FDC6BD;
+	--green: #127A4F;
 	--green-ligth: #C8F8E4;
 	--font-family: 'Noto Sans KR', sans-serif;
 	--small-font: 14px;
 	--medium-font: 16px;
 	--large-font: 18px;
-	--gray-dark: #6c7077;
+	--gray-dark: #6C7077;
 }
