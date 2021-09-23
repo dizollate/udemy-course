@@ -2,14 +2,8 @@ import Head from "next/head";
 import { AppProps } from "next/dist/next-server/lib/router/router";
 import "../styles/globals.css";
 import React from "react";
-import ym, { YMInitializer } from "react-yandex-metrika";
 
 function MyApp({ Component, pageProps, router }: AppProps): JSX.Element {
-  router.events.on("routeChangeComplete", (url: string) => {
-    if (typeof window !== "undefined") {
-      ym("hit", url);
-    }
-  });
 
   return (
     <>
@@ -30,11 +24,6 @@ function MyApp({ Component, pageProps, router }: AppProps): JSX.Element {
         />
         <meta property="og:locale" content="ru_RU" />
       </Head>
-      <YMInitializer
-        accounts={[]}
-        options={{ webvisor: true, defer: true }}
-        version="2"
-      />
       <Component {...pageProps} />
     </>
   );
