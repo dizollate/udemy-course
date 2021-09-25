@@ -1,12 +1,15 @@
 .main {
-  display: flex;
-  height: 100%;
-  position: relative;
+	position: relative;
+
+	display: flex;
+
+	height: 100%;
 }
 
 .wrapper {
-  position: absolute;
-  text-align: center;
-  top: 200px;
-  left: 10%;
+	position: absolute;
+	top: 200px;
+	left: 10%;
+
+	text-align: center;
 }
