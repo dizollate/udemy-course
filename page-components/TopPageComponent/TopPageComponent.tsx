@@ -12,7 +12,6 @@ export const TopPageComponent = ({
   products,
   firstCategory,
 }: TopPageComponentProps): JSX.Element => {
-
   const [{ products: sortedProducts, sort }, dispatchSort] = useReducer(
     sortReducer,
     {
@@ -69,7 +68,7 @@ export const TopPageComponent = ({
       )}
       <Htag tag="h2">Получаемые навыки</Htag>
       {page.tags.map((m) => (
-        <Tag color="primary" key={m}>
+        <Tag color="primary" key={m} style={{ marginBottom: "5px" }}>
           {m}
         </Tag>
       ))}

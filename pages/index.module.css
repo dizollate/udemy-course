@@ -1,0 +1,12 @@
+.main {
+  display: flex;
+  height: 100%;
+  position: relative;
+}
+
+.wrapper {
+  position: absolute;
+  text-align: center;
+  top: 200px;
+  left: 10%;
+}

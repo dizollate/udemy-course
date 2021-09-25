@@ -73,7 +73,7 @@
 	}
 
 	.header {
-		display: block;
+		display: grid;
 	}
 
 	.body {
